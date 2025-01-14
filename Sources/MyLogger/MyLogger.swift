@@ -33,13 +33,13 @@ public struct Logger : Sendable {
         logger.info("\(message)")
     }
     
-    public func error(_ message: String, byPass : Bool) {
+    public func error(_ message: String, byPass : Bool = false) {
         if !byPass {
             guard enabled else { return }
         }
         logger.error("\(message)")
     }
-    public func warning(_ message: String, byPass : Bool) {
+    public func warning(_ message: String, byPass : Bool = false) {
         if !byPass {
             guard enabled else { return }
         }
