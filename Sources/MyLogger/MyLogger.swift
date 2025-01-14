@@ -15,7 +15,7 @@ public struct Logger : Sendable {
     ///by pass enable switch.
     public let logger :  os.Logger
     
-    init(subsystem: String, category: String, verbose: Bool,enabled : Bool = true) {
+    public init(subsystem: String, category: String, verbose: Bool,enabled : Bool = true) {
         logger = os.Logger(subsystem: subsystem, category: category)
         self.enabled = enabled
     }
